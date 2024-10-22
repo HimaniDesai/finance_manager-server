@@ -6,7 +6,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-09-01'),
+        income_date: '2024-09-01',
         user_id: 1
     },
     {
@@ -16,7 +16,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-09-05'),
+        income_date: '2024-09-05',
         user_id: 1
     },
     {
@@ -26,7 +26,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 50.00,
-        income_date: new Date('2024-09-20'),
+        income_date: '2024-09-20',
         user_id: 1
     },
     {
@@ -36,7 +36,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-10-01'),
+        income_date: '2024-10-01',
         user_id: 1
     },
     {
@@ -46,7 +46,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-09-01'),
+        income_date: '2024-09-01',
         user_id: 2
     },
     {
@@ -56,7 +56,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-10-01'),
+        income_date: '2024-10-01',
         user_id: 2
     },
     {
@@ -66,7 +66,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-09-01'),
+        income_date: '2024-09-01',
         user_id: 3
     },
     {
@@ -76,7 +76,7 @@ export default [
         prize_money: 0.00,
         returns: 0.00,
         gifts: 0.00,
-        income_date: new Date('2024-10-01'),
+        income_date: '2024-10-01',
         user_id: 3
     }
 ]

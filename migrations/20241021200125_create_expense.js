@@ -11,7 +11,7 @@ export async function up(knex) {
         table.double('tax').notNullable().defaultTo(0.0000);
         table.double('investments').notNullable().defaultTo(0.0000);
         table.double('other_purchases').notNullable().defaultTo(0.0000);
-        table.dateTime('expense_date').notNullable().defaultTo(knex.fn.now());
+        table.timestamp('expense_date').notNullable().defaultTo(knex.fn.now());
         table.timestamp('created_at').defaultTo(knex.fn.now());
         table.timestamp('updated_at').defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         table.integer('user_id').unsigned().references('id').inTable('users');

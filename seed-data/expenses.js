@@ -7,7 +7,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-01"),
+        expense_date:  "2024-09-01 ",
         user_id: 1,
     },
     {
@@ -18,7 +18,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-08"),
+        expense_date:  "2024-09-08 ",
         user_id: 1,
     },
     {
@@ -29,7 +29,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-12"),
+        expense_date:  "2024-09-12 ",
         user_id: 1,
     },
     {
@@ -40,7 +40,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-09-21"),
+        expense_date:  "2024-09-21 ",
         user_id: 1,
     },
     {
@@ -51,7 +51,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 5.00,
-        expense_date: new Date("2024-09-30"),
+        expense_date:  "2024-09-30 ",
         user_id: 1,
     },
     {
@@ -62,7 +62,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-01"),
+        expense_date: "2024-10-01",
         user_id: 1,
     },
     {
@@ -73,7 +73,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-08"),
+        expense_date: "2024-10-08",
         user_id: 1,
     },
     {
@@ -84,7 +84,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-12"),
+        expense_date:  "2024-10-12 ",
         user_id: 1,
     },
     {
@@ -95,7 +95,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-10-21"),
+        expense_date:  "2024-10-21 ",
         user_id: 1,
     },
     {
@@ -106,7 +106,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-01"),
+        expense_date:  "2024-09-01 ",
         user_id: 2,
     },
     {
@@ -117,7 +117,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-08"),
+        expense_date:  "2024-09-08 ",
         user_id: 2,
     },
     {
@@ -128,7 +128,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-12"),
+        expense_date:  "2024-09-12 ",
         user_id: 2,
     },
     {
@@ -139,7 +139,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-09-21"),
+        expense_date:  "2024-09-21 ",
         user_id: 2,
     },
     {
@@ -150,7 +150,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 5.00,
-        expense_date: new Date("2024-09-30"),
+        expense_date:  "2024-09-30 ",
         user_id: 2,
     },
     {
@@ -161,7 +161,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-01"),
+        expense_date:  "2024-10-01 ",
         user_id: 2,
     },
     {
@@ -172,7 +172,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-08"),
+        expense_date:  "2024-10-08 ",
         user_id: 2,
     },
     {
@@ -183,7 +183,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-12"),
+        expense_date:  "2024-10-12 ",
         user_id: 2,
     },
     {
@@ -194,7 +194,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-10-21"),
+        expense_date:  "2024-10-21 ",
         user_id: 2,
     },
     {
@@ -205,7 +205,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-01"),
+        expense_date:  "2024-09-01 ",
         user_id: 3,
     },
     {
@@ -216,7 +216,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-08"),
+        expense_date:  "2024-09-08 ",
         user_id: 3,
     },
     {
@@ -227,7 +227,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-09-12"),
+        expense_date:  "2024-09-12 ",
         user_id: 3,
     },
     {
@@ -238,7 +238,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-09-21"),
+        expense_date:  "2024-09-21 ",
         user_id: 3,
     },
     {
@@ -249,7 +249,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 5.00,
-        expense_date: new Date("2024-09-30"),
+        expense_date:  "2024-09-30 ",
         user_id: 3,
     },
     {
@@ -260,7 +260,7 @@ export default [
         tax: 40.00,
         investments: 100.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-01"),
+        expense_date:  "2024-10-01 ",
         user_id: 3,
     },
     {
@@ -271,7 +271,7 @@ export default [
         tax: 0.00,
         investments: 10.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-08"),
+        expense_date:  "2024-10-08 ",
         user_id: 3,
     },
     {
@@ -282,7 +282,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 0.00,
-        expense_date: new Date("2024-10-12"),
+        expense_date:  "2024-10-12 ",
         user_id: 3,
     },
     {
@@ -293,7 +293,7 @@ export default [
         tax: 0.00,
         investments: 0.00,
         other_purchases: 50.00,
-        expense_date: new Date("2024-10-21"),
+        expense_date:  "2024-10-21 ",
         user_id: 3,
     }
 ]
