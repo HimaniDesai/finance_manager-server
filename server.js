@@ -2,7 +2,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
+import expensesRoutes from './routes/expenses-route.js'
+import incomesRoutes from './routes/incomes-route.js'
 // Load environment variables from .env file
 dotenv.config();
 
@@ -11,6 +12,10 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+//Routes
+app.use('/expenses', expensesRoutes)
+app.use('/incomes', incomesRoutes)
 
 // Basic API route
 app.get('/', (req, res) => {
