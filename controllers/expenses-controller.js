@@ -47,7 +47,7 @@ export const getExpenseById = async(req, res) => {
         .where({id : id});
 
         if (!expenseItem) {
-            return res.status(404).json({ message: "Expenses for "+ year +" not found." });
+            return res.status(404).json({ message: "Expenses for "+ id +" not found." });
         }
 
         res.status(200).json(expenseItem);
@@ -56,15 +56,12 @@ export const getExpenseById = async(req, res) => {
   }
 }
 
-//PUT/UPDATE existing item in the inventories table
+//PUT/UPDATE existing item in the expenses table
 export const edit = async (req,res) => {
-    const { expense_date, user_id, bills_and_utilities, grocery_and_food, insurances, tax, investments, other_purchases} = req.body;
-  
-    if ( !expense_date || !user_id || !bills_and_utilities || !grocery_and_food || !insurances || !tax || !investments || !other_purchases ) {
-      return res.status(400).json({
-        message: "Please provide missing data"
-      });
-    }
+    const { expense_date, bills_and_utilities, grocery_and_food, insurances, tax, investments, other_purchases} = req.body;
+    let newDate = dateFormat(expense_date)
+    console.log(newDate)
+    
    
     if (isNaN(bills_and_utilities) || Number(bills_and_utilities) < 0
         || isNaN(grocery_and_food) || Number(grocery_and_food) < 0
@@ -79,15 +76,15 @@ export const edit = async (req,res) => {
   
     try {
       const updatedExpense = await knex("expenses")
-        .where({ user_id: user_id })
-        .andWhere({ id : req.params.id})
+        .where({ id : req.params.id})
         .update({
             bills_and_utilities,
             grocery_and_food,
             insurances,
             tax,
             investments,
-            other_purchases
+            other_purchases,
+            expense_date:newDate
         });
       
       if (!updatedExpense) {
@@ -103,7 +100,54 @@ export const edit = async (req,res) => {
       res.status(200).json(newItem);
     } catch (error) {
       res.status(500).json({
-        message: `Error updating inventory item: ${error}`
+        message: `Error updating expense item: ${error}`
       });
     }
   };
+
+  const dateFormat = function(newDate) {
+    let d = new Date(newDate)
+    return d.getFullYear() + '-'+(d.getMonth()+1)+'-'+d.getDate()
+  }
+
+  //POST new expense item
+export const add = async (req, res) => {
+    const { user_id, expense_date, bills_and_utilities, grocery_and_food, insurances, tax, investments, other_purchases } = req.body;
+    let newDate = dateFormat(expense_date)
+    if (isNaN(bills_and_utilities) || Number(bills_and_utilities) < 0
+        || isNaN(grocery_and_food) || Number(grocery_and_food) < 0
+        || isNaN(insurances) || Number(insurances) < 0
+        || isNaN(tax) || Number(tax) < 0
+        || isNaN(investments) || Number(investments) < 0
+        || isNaN(other_purchases) || Number(other_purchases) < 0) {
+      return res.status(400).json({
+        message: "Expense value must be a valid number"
+      });
+    }
+  
+    try {
+      const result = await knex("expenses").insert({
+        id: null,
+        user_id,
+        bills_and_utilities,
+        grocery_and_food,
+        insurances,
+        tax,
+        investments,
+        other_purchases,
+        expense_date:newDate
+      });
+  
+      const [id] = result;
+      const newRecord = await knex("expenses")
+        .where({ id })
+        .first();
+  
+      res.status(201).json(newRecord);
+    } catch (error) {
+      res.status(500).json({
+        message: `Unable to create new expense item: ${error}`
+      });
+    }
+  };
+  
