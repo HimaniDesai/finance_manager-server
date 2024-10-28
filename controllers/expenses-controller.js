@@ -150,4 +150,30 @@ export const add = async (req, res) => {
       });
     }
   };
+
+//deleting an item from incomes
+export const deleteExpense = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const deletedCount = await knex("expenses")
+        .where({ id })
+        .delete();
+  
+      if (deletedCount === 0) {
+        return res.status(404).json({
+          message: "Item not found"
+        });
+      }
+  
+      res.status(200).json({
+        message: "Item deleted successfully"
+      });
+    } catch (error) {
+      console.error("Error deleting expenses item:", error);
+      res.status(500).json({
+        message: "Error deleting expenses item"
+      });
+    }
+  };
   
